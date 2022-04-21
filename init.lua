@@ -10,6 +10,7 @@ require "user.cmp"
 require "user.lsp"
 require "user.symbols_outline"
 require "user.telescope"
+require "colorizer"
 -- require "user.web_devicons"
 -- require "user.test_toggleterm"
 vim.cmd[[colorscheme tokyonight]]
