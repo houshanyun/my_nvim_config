@@ -26,6 +26,8 @@ local options = {
   swapfile = false,                        -- creates a swapfile
   wildmenu = true,
   hidden = true,
+  spell = true,
+  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
 }
 
 vim.opt.shortmess:append "c"

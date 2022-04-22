@@ -12,7 +12,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   sort_by = "name",
   update_cwd = false,
   view = {
-    width = 10,
+    width = 30,
     height = 30,
     side = "left",
     preserve_window_proportions = false,
