@@ -48,16 +48,16 @@ local kind_icons = {
   TypeParameter = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
-local border = {
-    { "╭", "CmpBorder" },
-    { "─", "CmpBorder" },
-    { "╮", "CmpBorder" },
-    { "│", "CmpBorder" },
-    { "╯", "CmpBorder" },
-    { "─", "CmpBorder" },
-    { "╰", "CmpBorder" },
-    { "│", "CmpBorder" },
-}
+-- local border = {
+--     { "╭", "CmpBorder" },
+--     { "─", "CmpBorder" },
+--     { "╮", "CmpBorder" },
+--     { "│", "CmpBorder" },
+--     { "╯", "CmpBorder" },
+--     { "─", "CmpBorder" },
+--     { "╰", "CmpBorder" },
+--     { "│", "CmpBorder" },
+-- }
 
 cmp.setup {
   snippet = {
@@ -67,7 +67,7 @@ cmp.setup {
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
-	["<C-j>"] = cmp.mapping.select_next_item(),
+	  ["<C-j>"] = cmp.mapping.select_next_item(),
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
@@ -138,15 +138,15 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  window = {
-    -- documentation = cmp.config.window.bordered()
-    documentation = {
-     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
-    completion = {
-     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
-  },  
+  -- window = {
+  --   -- documentation = cmp.config.window.bordered()
+  --   documentation = {
+  --    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  --   },
+  --   completion = {
+  --    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  --   },
+  -- },  
   experimental = {
     ghost_text = true,
     native_menu = false,
