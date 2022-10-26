@@ -12,7 +12,6 @@ vim.cmd [[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
   augroup end
 ]]
 
@@ -75,6 +74,7 @@ return require('packer').startup(function(use)
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
+    use 'Tsuzat/NeoSolarized.nvim'
     use 'folke/lsp-colors.nvim'
     use {
       'svrana/neosolarized.nvim',

@@ -9,7 +9,8 @@ require "user.lspsaga"
 require "user.lsp-colors"
 
 require "ui.bufferline"
-require "ui.neosolarized"
+-- require "ui.neosolarized"
+require "ui.colorscheme"
 require "ui.web_devicons"
 require "ui.treesitter"
 require "ui.colorizer"
@@ -21,4 +22,5 @@ require "lsp.lspconfig"
 require "lsp.null-ls"
 
 -- vim.cmd[[colorscheme tokyonight]]
+
 

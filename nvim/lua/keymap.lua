@@ -1,8 +1,9 @@
-local keymap = vim.keymap.set
+vim.g.mapleader = " "
+local keymap = vim.keymap
 
-keymap("n", "<A-t>", ":NvimTreeOpen<CR>")
-keymap("n", "<A-c>", ":NvimTreeClose<CR>")
+--keymap.set("i", "jk", "<ESC>")
 
+keymap.set("n", "<A-t>", ":NvimTreeOpen<CR>")
+keymap.set("n", "<A-c>", ":NvimTreeClose<CR>")
 
-
-keymap("n", "<A-e>", ":Telescope<CR>")
+keymap.set("n", "<A-e>", ":Telescope<CR>")
