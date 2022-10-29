@@ -19,39 +19,25 @@ return require('packer').startup(function(use)
 
 	  use 'wbthomason/packer.nvim'
     use "kyazdani42/nvim-web-devicons"
-    -- use "MunifTanjim/nui.nvim"
-    -- use "rcarriga/nvim-notify"
     use "tjdevries/colorbuddy.nvim"
     use "nvim-lua/plenary.nvim"
 	  
     -- Packer
-    -- use({
-    --   "folke/noice.nvim",
-    --   event = "VimEnter",
-    --   config = function()
-    --     require("noice").setup()
-    --   end,
-    --   -- requires = {
-    --   --   -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    --   --   "MunifTanjim/nui.nvim",
-    --   --   "rcarriga/nvim-notify",
-    --   -- }
-    -- })
 
     -- nvim-tree
     use {
       'kyazdani42/nvim-tree.lua',
-      -- requires = {
-      --   'kyazdani42/nvim-web-devicons', -- optional, for file icons
-      -- },
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
     -- lsp
     use {
       "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
+      "jose-elias-alvarez/null-ls.nvim",
+      "jayp0521/mason-null-ls.nvim",
     }
+    
+    use "williamboman/mason-lspconfig.nvim"
+    use "neovim/nvim-lspconfig"
     
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
     use "hrsh7th/cmp-buffer" -- buffer completions
@@ -59,18 +45,17 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-cmdline" -- cmdline completions
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
     use "hrsh7th/cmp-nvim-lua"	-- neovim api
-    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'jose-elias-alvarez/null-ls.nvim'
+
+    -- snippets
+    use 'saadparwaiz1/cmp_luasnip'
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
 
     -- lspsaga
     use({
       "glepnir/lspsaga.nvim",
       branch = "main",
     })
-    
-    -- snippets
-    use "rafamadriz/friendly-snippets"
-    use "L3MON4D3/LuaSnip"
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -108,8 +93,8 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     -- buffer line for Neovim
-    use {'akinsho/bufferline.nvim', tag = "v2.*"}
-    use 'romgrk/barbar.nvim'
+    use {'akinsho/bufferline.nvim', tag = "v3.*"}
+    -- use 'romgrk/barbar.nvim'
     use "norcalli/nvim-colorizer.lua"
 
     -- autotag
@@ -126,16 +111,16 @@ return require('packer').startup(function(use)
     }
 
     -- zen-mode
-    use {
-      "folke/zen-mode.nvim",
-      config = function()
-        require("zen-mode").setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
-        }
-      end
-    }
+    -- use {
+    --   "folke/zen-mode.nvim",
+    --   config = function()
+    --     require("zen-mode").setup {
+    --       -- your configuration comes here
+    --       -- or leave it empty to use the default settings
+    --       -- refer to the configuration section below
+    --     }
+    --   end
+    -- }
 
 	  if packer_bootstrap then
     	require('packer').sync()

@@ -36,6 +36,9 @@ vim.opt.shortmess:append "c"
 vim.opt.winminwidth = 10
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end

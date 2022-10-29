@@ -1,21 +1,22 @@
-local status1, m = pcall(require, "mason")
+local status1, mason = pcall(require, "mason")
 if not status1 then
   print("mason is not installed")
   return
 end
 
-
-local status2, m_lsp = pcall(require, "mason-lspconfig")
+local status2, mason_lsp = pcall(require, "mason-lspconfig")
 
 if not status2 then
     print("mason-lspconfig is not installed")
     return
 end
 
--- local lspconfig = require("lspconfig")
+mason.setup()
 
-local servers = { 
+mason_lsp.setup({
+	ensure_installed = {
         "cssls", 
+        "cssmodules_ls",
         "eslint",
         "emmet_ls",
         "html",
@@ -24,12 +25,8 @@ local servers = {
         "tailwindcss",
         "vimls",
         "yamlls",
-}
-
-m.setup()
-m_lsp.setup({
-	ensure_installed = servers,
-    automatic_installation = false,
+        "marksman",
+        "remark_ls", 
+  },
 })
-
 

@@ -41,41 +41,47 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.html.setup {
+nvim_lsp["html"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-nvim_lsp.cssls.setup {
+nvim_lsp["cssls"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-
-nvim_lsp.cssmodules_ls.setup{
+nvim_lsp["cssmodules_ls"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-
-nvim_lsp.emmet_ls.setup{
+nvim_lsp["emmet_ls"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-
-nvim_lsp.eslint.setup{
+nvim_lsp["eslint"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-
-nvim_lsp.jsonls.setup{
+nvim_lsp["jsonls"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-
-nvim_lsp.tsserver.setup {
+nvim_lsp["tsserver"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }
-
-nvim_lsp.tailwindcss.setup {
+nvim_lsp["tailwindcss"].setup {
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+nvim_lsp["marksman"].setup {
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+nvim_lsp["yamlls"].setup {
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+nvim_lsp["remark_ls"].setup {
   flags = lsp_flags,
   capabilities = capabilities,
 }

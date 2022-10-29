@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "css", "lua", "html", "javascript", "json", "json5", "scss", "tsx", "typescript", "vim", "yaml" },
+  ensure_installed = { "css", "lua", "html", "javascript", "json", "json5", "scss", "tsx", "typescript", "vim", "yaml", "markdown", },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -11,6 +11,9 @@ require'nvim-treesitter.configs'.setup {
   -- List of parsers to ignore installing (for "all")
   -- ignore_install = {},
   autotag = {
+    enable = true,
+  },
+  indent = {
     enable = true,
   },
 
