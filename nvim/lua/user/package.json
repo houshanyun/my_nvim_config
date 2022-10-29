@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "g": "^2.0.1",
-    "remark-language-server": "^2.0.0"
-  }
-}
