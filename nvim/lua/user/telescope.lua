@@ -85,6 +85,9 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+    fd = {
+      theme = "ivy",
+    },
     find_files = {
       theme = "ivy",
     },

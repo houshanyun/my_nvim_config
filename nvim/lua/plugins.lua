@@ -56,15 +56,35 @@ return require('packer').startup(function(use)
       "glepnir/lspsaga.nvim",
       branch = "main",
     })
+    -- Noice
+    --use({
+    --  "folke/noice.nvim",
+    --  config = function()
+    --    require("notify").setup({
+    --      background_color = "#000000",
+    --    })
+    --  end,
+    --  requires = {
+    --    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    --    "MunifTanjim/nui.nvim",
+    --    -- OPTIONAL:
+    --    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --    --   If not available, we use `mini` as the fallback
+    --    "rcarriga/nvim-notify",
+    --    }
+    --})
 
+    -- comment
+    use {
+      'numToStr/Comment.nvim',
+      config = function()
+        require('Comment').setup()
+      end
+    }
     -- colorscheme
     use 'folke/tokyonight.nvim'
     use 'Tsuzat/NeoSolarized.nvim'
     use 'folke/lsp-colors.nvim'
-    use {
-      'svrana/neosolarized.nvim',
-      -- requires = { 'tjdevries/colorbuddy.nvim' }
-    }
 
     -- treesitter
     use {
